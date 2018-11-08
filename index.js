@@ -25,7 +25,10 @@ router.get('/', function(req, res) {
 app.get("/", function(req, res) {
     res.send("Welcome to Friend finder!");
   } );
+  app.get("/api", function(req, res) {
+    return res.json(characters);
+  });
 //start the server
-app.listen(port, function() {
+app.listen(PORT, function() {
     console.log("Magic! App listening on PORT " + PORT);
   });
